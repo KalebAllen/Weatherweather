@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D5m-Oy-XKl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +12,10 @@
         <scene sceneID="BX5-Lr-qxP">
             <objects>
                 <viewController id="Scl-mX-aHv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t9y-eC-ahi"/>
+                        <viewControllerLayoutGuide type="bottom" id="cyw-f3-6D9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="left" id="9nD-3c-7JB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="asm-xh-lHY">
-                                <rect key="frame" x="16" y="258" width="343" height="267"/>
+                                <rect key="frame" x="16" y="200" width="343" height="267"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-cW-Jcf">
                                         <rect key="frame" x="93.5" y="0.0" width="156" height="172"/>
@@ -73,17 +76,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="O7d-kY-lxa" firstAttribute="trailing" secondItem="qmv-C2-UVl" secondAttribute="trailing" constant="16" id="0dC-Zu-Ab0"/>
-                            <constraint firstItem="asm-xh-lHY" firstAttribute="centerX" secondItem="O7d-kY-lxa" secondAttribute="centerX" id="BtN-4K-C9k"/>
-                            <constraint firstItem="qmv-C2-UVl" firstAttribute="top" secondItem="O7d-kY-lxa" secondAttribute="top" constant="20" id="FMj-wE-fRD"/>
-                            <constraint firstItem="asm-xh-lHY" firstAttribute="leading" secondItem="O7d-kY-lxa" secondAttribute="leading" constant="16" id="OKr-IT-zBI"/>
-                            <constraint firstItem="2v8-MO-kdU" firstAttribute="leading" secondItem="O7d-kY-lxa" secondAttribute="leading" id="QQS-pA-06p"/>
-                            <constraint firstItem="qmv-C2-UVl" firstAttribute="leading" secondItem="O7d-kY-lxa" secondAttribute="leading" constant="16" id="SxN-Ia-c3o"/>
-                            <constraint firstItem="O7d-kY-lxa" firstAttribute="bottom" secondItem="2v8-MO-kdU" secondAttribute="bottom" id="dgD-Op-Ln3"/>
-                            <constraint firstItem="O7d-kY-lxa" firstAttribute="trailing" secondItem="asm-xh-lHY" secondAttribute="trailing" constant="16" id="qTc-ke-orh"/>
-                            <constraint firstItem="asm-xh-lHY" firstAttribute="centerY" secondItem="O7d-kY-lxa" secondAttribute="centerY" id="xUo-gb-KJN"/>
+                            <constraint firstAttribute="trailing" secondItem="qmv-C2-UVl" secondAttribute="trailing" constant="16" id="0dC-Zu-Ab0"/>
+                            <constraint firstItem="asm-xh-lHY" firstAttribute="centerX" secondItem="9nD-3c-7JB" secondAttribute="centerX" id="BtN-4K-C9k"/>
+                            <constraint firstItem="qmv-C2-UVl" firstAttribute="top" secondItem="t9y-eC-ahi" secondAttribute="bottom" constant="20" id="FMj-wE-fRD"/>
+                            <constraint firstItem="asm-xh-lHY" firstAttribute="leading" secondItem="9nD-3c-7JB" secondAttribute="leading" constant="16" id="OKr-IT-zBI"/>
+                            <constraint firstItem="2v8-MO-kdU" firstAttribute="leading" secondItem="9nD-3c-7JB" secondAttribute="leading" id="QQS-pA-06p"/>
+                            <constraint firstItem="qmv-C2-UVl" firstAttribute="leading" secondItem="9nD-3c-7JB" secondAttribute="leading" constant="16" id="SxN-Ia-c3o"/>
+                            <constraint firstItem="cyw-f3-6D9" firstAttribute="top" secondItem="2v8-MO-kdU" secondAttribute="bottom" id="dgD-Op-Ln3"/>
+                            <constraint firstAttribute="trailing" secondItem="asm-xh-lHY" secondAttribute="trailing" constant="16" id="qTc-ke-orh"/>
+                            <constraint firstItem="asm-xh-lHY" firstAttribute="centerY" secondItem="9nD-3c-7JB" secondAttribute="centerY" id="xUo-gb-KJN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="O7d-kY-lxa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="Y2w-mM-EMG">
                         <barButtonItem key="rightBarButtonItem" title="Change Location" id="bEE-gP-9Nj">
@@ -101,6 +103,10 @@
         <scene sceneID="SSo-UD-1rq">
             <objects>
                 <viewController id="Jck-Da-qc4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oNR-R8-eNc"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vQ-My-6eV"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YSk-I7-bPZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,11 +118,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="66i-aZ-8hW" firstAttribute="top" secondItem="kQC-Ba-IwH" secondAttribute="top" id="9dj-Qu-D74"/>
-                            <constraint firstItem="66i-aZ-8hW" firstAttribute="trailing" secondItem="kQC-Ba-IwH" secondAttribute="trailing" id="9nU-h2-XbB"/>
-                            <constraint firstItem="66i-aZ-8hW" firstAttribute="leading" secondItem="kQC-Ba-IwH" secondAttribute="leading" id="m4v-ZK-Vsk"/>
+                            <constraint firstItem="66i-aZ-8hW" firstAttribute="top" secondItem="oNR-R8-eNc" secondAttribute="bottom" id="9dj-Qu-D74"/>
+                            <constraint firstItem="66i-aZ-8hW" firstAttribute="trailing" secondItem="YSk-I7-bPZ" secondAttribute="trailing" id="9nU-h2-XbB"/>
+                            <constraint firstItem="66i-aZ-8hW" firstAttribute="leading" secondItem="YSk-I7-bPZ" secondAttribute="leading" id="m4v-ZK-Vsk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kQC-Ba-IwH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5g-pd-9zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
