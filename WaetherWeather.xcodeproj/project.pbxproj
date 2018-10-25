@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		0B625C252181000800A9CBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B625C242181000800A9CBBD /* AppDelegate.swift */; };
 		0B625C272181000800A9CBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B625C262181000800A9CBBD /* ViewController.swift */; };
-		0B625C2A2181000800A9CBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B625C282181000800A9CBBD /* Main.storyboard */; };
 		0B625C2C2181000900A9CBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B625C2B2181000900A9CBBD /* Assets.xcassets */; };
 		0B625C2F2181000900A9CBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B625C2D2181000900A9CBBD /* LaunchScreen.storyboard */; };
+		0BD667762182136A00322963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD667752182136A00322963 /* Main.storyboard */; };
 		711F6B0BFDEA4B7E3CFB2A0E /* Pods_WaetherWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57697A166669414F846ED47 /* Pods_WaetherWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,10 +19,10 @@
 		0B625C212181000800A9CBBD /* WaetherWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaetherWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B625C242181000800A9CBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B625C262181000800A9CBBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B625C292181000800A9CBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B625C2B2181000900A9CBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B625C2E2181000900A9CBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B625C302181000900A9CBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BD667752182136A00322963 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		250FE963CC5CAE294A8D96B9 /* Pods-WaetherWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaetherWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaetherWeather/Pods-WaetherWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		60AB65989BE3FA22A5BB87CA /* Pods-WaetherWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaetherWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaetherWeather/Pods-WaetherWeather.release.xcconfig"; sourceTree = "<group>"; };
 		C57697A166669414F846ED47 /* Pods_WaetherWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaetherWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +63,7 @@
 			children = (
 				0B625C242181000800A9CBBD /* AppDelegate.swift */,
 				0B625C262181000800A9CBBD /* ViewController.swift */,
-				0B625C282181000800A9CBBD /* Main.storyboard */,
+				0BD667752182136A00322963 /* Main.storyboard */,
 				0B625C2B2181000900A9CBBD /* Assets.xcassets */,
 				0B625C2D2181000900A9CBBD /* LaunchScreen.storyboard */,
 				0B625C302181000900A9CBBD /* Info.plist */,
@@ -148,9 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD667762182136A00322963 /* Main.storyboard in Resources */,
 				0B625C2F2181000900A9CBBD /* LaunchScreen.storyboard in Resources */,
 				0B625C2C2181000900A9CBBD /* Assets.xcassets in Resources */,
-				0B625C2A2181000800A9CBBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,14 +210,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0B625C282181000800A9CBBD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B625C292181000800A9CBBD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0B625C2D2181000900A9CBBD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Interaptskills.WaetherWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -377,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Interaptskills.WaetherWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
