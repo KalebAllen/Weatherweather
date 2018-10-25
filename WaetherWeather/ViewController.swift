@@ -37,6 +37,23 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+    let googleBaseURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
+        let googleRequestURL = googleBaseURL + "Glasgow,+Kentucky" + "&key=" + apiKeys.googleKey
+        
+        let googleRequest = Alamofire.request(googleBaseURL)
+        
+        googleRequest.responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    
+    
+    
     }
 }
 
