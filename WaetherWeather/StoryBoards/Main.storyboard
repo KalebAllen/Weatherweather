@@ -11,7 +11,7 @@
         <!--Weather-->
         <scene sceneID="BX5-Lr-qxP">
             <objects>
-                <viewController id="Scl-mX-aHv" sceneMemberID="viewController">
+                <viewController id="Scl-mX-aHv" customClass="WeatherDisplay" customModule="WaetherWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t9y-eC-ahi"/>
                         <viewControllerLayoutGuide type="bottom" id="cyw-f3-6D9"/>
@@ -94,15 +94,22 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="HighTempLable" destination="dhu-YE-BkF" id="15X-4h-1cz"/>
+                        <outlet property="LocationLable" destination="qmv-C2-UVl" id="77D-6p-ems"/>
+                        <outlet property="LowTempLable" destination="L4g-Yh-lOH" id="dZF-84-PDs"/>
+                        <outlet property="TempLable" destination="CaO-yZ-f8x" id="e06-mS-euY"/>
+                        <outlet property="iConLable" destination="dhP-cW-Jcf" id="LRE-tr-fbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZY-c0-KsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1136.8" y="178.56071964017991"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Selector View Controller-->
         <scene sceneID="SSo-UD-1rq">
             <objects>
-                <viewController id="Jck-Da-qc4" sceneMemberID="viewController">
+                <viewController id="Jck-Da-qc4" customClass="LocationSelectorViewController" customModule="WaetherWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oNR-R8-eNc"/>
                         <viewControllerLayoutGuide type="bottom" id="0vQ-My-6eV"/>
@@ -123,6 +130,9 @@
                             <constraint firstItem="66i-aZ-8hW" firstAttribute="leading" secondItem="YSk-I7-bPZ" secondAttribute="leading" id="m4v-ZK-Vsk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LocationSearch" destination="66i-aZ-8hW" id="J9F-wf-okL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5g-pd-9zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherDisplay.swift
 //  WaetherWeather
 //
 //  Created by Kaleb Allen on 10/24/18.
@@ -10,10 +10,18 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class WeatherDisplay: UIViewController {
+    @IBOutlet weak var LocationLable: UILabel!
+    @IBOutlet weak var iConLable: UILabel!
+    @IBOutlet weak var TempLable: UILabel!
+    @IBOutlet weak var HighTempLable: UILabel!
+    @IBOutlet weak var LowTempLable: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         let apiKeys = APIKeys()
         
@@ -52,8 +60,16 @@ class ViewController: UIViewController {
             }
         }
     
-    
-    
+        func setUpDefaultUI() {
+            LocationLable.text = "Seacrch a location"
+            iConLable.text = "🐲"
+            TempLable.text = "º"
+            HighTempLable.text = "Hº"
+            LowTempLable.text = "Lº"
+            
+        }
+    setUpDefaultUI()
     }
 }
+
 
