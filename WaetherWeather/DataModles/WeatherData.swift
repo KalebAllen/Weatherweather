@@ -64,13 +64,14 @@ class WeatherData {
     let temp: Double
     let HighTemp: Double
     let LowTemp: Double
-    let Condition: Condition
+    let condition: Condition
     
     //MARK:-) Meathods
-    init(temp: Double, HighTemp: Double, LowTemp: Double, Condition: Condition) {
-        self .temp = temp
-        self .HighTemp = HighTemp
-        self .LowTemp = LowTemp
+    init(temp: Double, HighTemp: Double, LowTemp: Double, condition: Condition) {
+        self.temp = temp
+        self.HighTemp = HighTemp
+        self.LowTemp = LowTemp
+        self.condition = condition
     }
     
     convenience init?(json: JSON) {
@@ -90,7 +91,7 @@ class WeatherData {
             return nil
         }
         //Since we were able to pull all the data we needed from JSON, we are going to make a new instance of the WeatherData class, so call 
-        self.init(temperature: temperature, highTemperature: highTemperature, lowTemperature: lowTemperature, Condition: condition)
+        self.init(temp: temperature, HighTemp: highTemperature, LowTemp: lowTemperature, condition: condition)
         
     }
     

@@ -17,6 +17,21 @@ class WeatherDisplay: UIViewController {
     @IBOutlet weak var HighTempLable: UILabel!
     @IBOutlet weak var LowTempLable: UILabel!
     
+    var displayWeatherData: WeatherData! {
+        didSet {
+            iConLable.text = displayWeatherData.condition.icon
+            TempLable.text = "\(displayWeatherData.temp)º"
+            HighTempLable.text = "\(displayWeatherData.HighTemp)º"
+            LowTempLable.text = "\(displayWeatherData.LowTemp)ø"
+        }
+    }
+    
+    var displayGeocodingData: GeoCoding! {
+    didSet {
+        LocationLable.text = displayGeocodingData.formattedAddress
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +60,7 @@ class WeatherDisplay: UIViewController {
                 print(error.localizedDescription)
             }
         }
-    let googleBaseURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
+        let googleBaseURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
         let googleRequestURL = googleBaseURL + "Glasgow,+Kentucky" + "&key=" + apiKeys.googleKey
         
         let googleRequest = Alamofire.request(googleBaseURL)
@@ -59,7 +74,7 @@ class WeatherDisplay: UIViewController {
                 print(error.localizedDescription)
             }
         }
-    
+        
         func setUpDefaultUI() {
             LocationLable.text = "Seacrch a location"
             iConLable.text = "🐲"
@@ -68,8 +83,9 @@ class WeatherDisplay: UIViewController {
             LowTempLable.text = "Lº"
             
         }
-    setUpDefaultUI()
+        setUpDefaultUI()
     }
+    @IBAction func unwindToWeatherDisplay(segue: UIStoryboardSegue){ }
 }
 
 
