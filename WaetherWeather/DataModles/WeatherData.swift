@@ -86,7 +86,7 @@ class WeatherData {
         guard let conditionString = json[WeatherDataKeys.currnetly.rawValue][WeatherDataKeys.icon.rawValue].string else {
             return nil
         }
-        guard let condition = condition(rawValue: conditionString) else {
+        guard let condition = Condition(rawValue: conditionString) else {
             return nil
         }
         //Since we were able to pull all the data we needed from JSON, we are going to make a new instance of the WeatherData class, so call 

@@ -11,6 +11,7 @@
 		0B625C272181000800A9CBBD /* WeatherDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B625C262181000800A9CBBD /* WeatherDisplay.swift */; };
 		0B625C2C2181000900A9CBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B625C2B2181000900A9CBBD /* Assets.xcassets */; };
 		0B625C2F2181000900A9CBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B625C2D2181000900A9CBBD /* LaunchScreen.storyboard */; };
+		0BB21B7B21874D6200C2B9DD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB21B7A21874D6200C2B9DD /* APIManager.swift */; };
 		0BD667762182136A00322963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD667752182136A00322963 /* Main.storyboard */; };
 		0BD66778218236C200322963 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD66777218236C200322963 /* APIKeys.swift */; };
 		0BFCF660218388CC00D024F9 /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFCF65F218388CC00D024F9 /* LocationSelectorViewController.swift */; };
@@ -26,6 +27,7 @@
 		0B625C2B2181000900A9CBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B625C2E2181000900A9CBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B625C302181000900A9CBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB21B7A21874D6200C2B9DD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0BD667752182136A00322963 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0BD66777218236C200322963 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0BFCF65F218388CC00D024F9 /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				0BD66777218236C200322963 /* APIKeys.swift */,
+				0BB21B7A21874D6200C2B9DD /* APIManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				0BD66778218236C200322963 /* APIKeys.swift in Sources */,
 				0B625C272181000800A9CBBD /* WeatherDisplay.swift in Sources */,
 				0B625C252181000800A9CBBD /* AppDelegate.swift in Sources */,
+				0BB21B7B21874D6200C2B9DD /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
