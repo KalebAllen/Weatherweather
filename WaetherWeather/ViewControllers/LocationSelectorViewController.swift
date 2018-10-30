@@ -51,16 +51,7 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate {
             }
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     func retrivedWeatherData(latitude: Double, longitude: Double) {
         apiManager.getWeather(latitude: latitude, longitude: longitude) {
             (weatherData, error) in
@@ -78,6 +69,7 @@ class LocationSelectorViewController: UIViewController, UISearchBarDelegate {
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? WeatherDisplay, let retrievedGeocodingData = geocodingData, let retrievedWeatherData = weatherData {
             destinationVC.displayGeocodingData = retrievedGeocodingData

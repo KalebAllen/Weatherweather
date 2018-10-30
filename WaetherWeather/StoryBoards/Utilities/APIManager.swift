@@ -19,11 +19,12 @@ class APIManager {
         case invalidData
     }
     func getWeather(latitude: Double, longitude: Double, onCompletion: @escaping (WeatherData?, Error?) -> Void) {
-        let url = darkSkyURL + apiKeys.darkSkyKey + "/" + "," + "\(latitude)" + "\(longitude)"
+        let url = darkSkyURL + apiKeys.darkSkyKey + "/" + "\(latitude)" + "," + "\(longitude)"
         let request = Alamofire.request(url)
         request.responseJSON { response in
             switch response.result {
-            case .success(let value): let json = JSON(value)
+            case .success(let value):
+            let json = JSON(value)
             print(json)
             if let weatherData = WeatherData(json: json)
             {
@@ -44,6 +45,7 @@ class APIManager {
         request.responseJSON { response in switch response.result {
         case .success(let value):
             let json = JSON(value)
+            print(json)
             if let geocodingData = GeoCoding(json: json) {
                 onCompletion(geocodingData, nil)
             } else {
