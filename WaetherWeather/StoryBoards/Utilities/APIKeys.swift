@@ -11,7 +11,7 @@ import Foundation
 //Struct to contain our API keys from DarkSky the Google Geocoding API
 struct APIKeys {
     let darkSkyKey = "f9f602ac43ced41a00308f79c81c9c40"
-    let googleKey = "AIzaSyDxplceCs8t1JIzj8-6FErcSxPZ7b5Js74"
+    let googleKey = "AIzaSyCPTI9AQ-ApTK4KdHZv-H69URe2_-nFPzQ"
 }
 /*
  Example DarkSky request:
